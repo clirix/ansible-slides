@@ -14,7 +14,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config_web1.vm.box = "precise32"
     config_web1.vm.box_url = "http://files.vagrantup.com/precise32.box"
     config_web1.vm.host_name = "web1"
-    config_web1.vm.network "private_network", ip: "192.168.50.10", virtualbox__intnet: true
+    config_web1.vm.network "private_network", ip: "192.168.50.10"
+        #virtualbox__intnet: true
     
 
   end
@@ -24,7 +25,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config_web2.vm.box = "precise32"
     config_web2.vm.box_url = "http://files.vagrantup.com/precise32.box"
     config_web2.vm.host_name = "web2"
-    config_web2.vm.network "private_network", ip: "192.168.50.11", virtualbox__intnet: true
+    config_web2.vm.network "private_network", ip: "192.168.50.11"
+    #virtualbox__intnet: true
 
 
   end
@@ -34,7 +36,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config_mysql1.vm.box = "precise32"
     config_mysql1.vm.box_url = "http://files.vagrantup.com/precise32.box"
     config_mysql1.vm.host_name = "db1"
-    config_mysql1.vm.network "private_network", ip: "192.168.50.12", virtualbox__intnet: true
+    config_mysql1.vm.network "private_network", ip: "192.168.50.12"
+        #virtualbox__intnet: true
 
 
   end

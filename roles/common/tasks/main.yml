@@ -1,0 +1,21 @@
+ # Commons
+- name: Update APT package cache
+  apt: update_cache=yes
+
+- name: Install packages
+  apt: pkg={{item}} state=installed
+  with_items: ${basic_pkgs}
+  tags: basic-pkgs
+
+- debug: var={{user}}
+
+- name: Install Oh-My-Zsh
+  git: repo=git://github.com/robbyrussell/oh-my-zsh.git dest=/home/{{default_shell.user}}/.oh-my-zsh
+
+- name: Config Oh-My-Zsh
+  command: cp /home/{{user}}/.oh-my-zsh/templates/zshrc.zsh-template /home/{{user}}/.zshrc,
+   creates=/home/{{user}}/.zshrc
+
+- name: Change default shell
+  user: name={{default_shell.user}} shell={{default_shell.shell}}
+  tags: default-shell

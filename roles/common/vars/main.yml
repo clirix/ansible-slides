@@ -1,0 +1,13 @@
+default_shell:
+    user: 'vagrant'
+    shell: '/bin/zsh'
+
+basic_pkgs:
+    - zip
+    - curl
+    - zsh
+    - git
+    - mc
+    - python-software-properties
+    - ufw
+

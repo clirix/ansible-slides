@@ -1,0 +1,6 @@
+# web1.yml
+- hosts: all
+  user: "{{ user }}"
+  sudo: true
+  roles:
+    - common
