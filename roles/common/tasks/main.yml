@@ -9,6 +9,9 @@
 
 - debug: var={{user}}
 
+- name: SSH in der Firewall freigeben
+  command: ufw allow ssh
+
 - name: Install Oh-My-Zsh
   git: repo=git://github.com/robbyrussell/oh-my-zsh.git dest=/home/{{default_shell.user}}/.oh-my-zsh
 
